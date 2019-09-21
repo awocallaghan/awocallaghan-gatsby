@@ -37,6 +37,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Deploy to gh-pages
         run: |
+          git config --global user.email "aocallaghan@outlook.com"
+          git config --global user.name "Alex O'Callaghan"
           npm install
           npm run deploy
         env:
