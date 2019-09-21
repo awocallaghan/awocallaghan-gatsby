@@ -1,11 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import PostList from "../components/post-list"
 
-const IndexPage = () => (
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
   <Layout>
     <SEO title="Alex O'Callaghan" />
     <section>
@@ -15,15 +19,27 @@ const IndexPage = () => (
       <Link to="/about/">More about me</Link>
       <hr />
       <h2>Posts</h2>
-      <ol>
-        <li><Link to="/some/">Some post</Link></li>
-        <li><Link to="/some/">Some post</Link></li>
-        <li><Link to="/some/">Some post</Link></li>
-        <li><Link to="/some/">Some post</Link></li>
-      </ol>
-      <Link to="/about/">More posts</Link>
+      <PostList posts={edges.map(edge => edge.node)} />
+      <Link to="/blog/">More posts</Link>
     </section>
   </Layout>
 )
-
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 5) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`;
