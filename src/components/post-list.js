@@ -1,9 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const List = styled.ol`
+  list-style-type: square;
+`
 
 const PostList = ({ posts }) => (
-  <ol>
+  <List>
     {posts.map(post => (
       <li key={post.id}>
         <Link to={post.frontmatter.path}>
@@ -11,7 +16,7 @@ const PostList = ({ posts }) => (
         </Link>
       </li>
     ))}
-  </ol>
+  </List>
 )
 
 PostList.propTypes = {

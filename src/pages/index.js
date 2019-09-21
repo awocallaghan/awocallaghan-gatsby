@@ -1,9 +1,17 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostList from "../components/post-list"
+import { primary } from "../components/variables"
+
+const Hr = styled.hr`
+  background-color: ${primary} 
+  height: 2px;
+  margin: 1.45rem 0;
+`
 
 const IndexPage = ({
   data: {
@@ -30,7 +38,7 @@ const IndexPage = ({
         .
       </p>
       <Link to="/about/">More about me</Link>
-      <hr />
+      <Hr />
       <h2>Posts</h2>
       <PostList posts={edges.map(edge => edge.node)} />
       <Link to="/blog/">More posts</Link>
