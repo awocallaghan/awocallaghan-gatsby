@@ -40,6 +40,6 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "${GITHUB_ACTOR}"
           npm install
-          npm run deploy
+          npm run deploy --repo https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${INPUT_REPO}.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
