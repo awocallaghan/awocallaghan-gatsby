@@ -14,8 +14,21 @@ const IndexPage = ({
     <SEO title="Alex O'Callaghan" />
     <section>
       <h1>Hello!</h1>
-      <p>I'm a software developer called Alex O'Callaghan. I build full stack web applications.</p>
-      <p>I studied Computer Science at the <a href="https://soton.ac.uk" target="_blank">University of Southampton</a> and currently work at <a href="https://mintel.com" target="_blank">Mintel</a>.</p>
+      <p>
+        I'm a software developer called Alex O'Callaghan. I build full stack web
+        applications.
+      </p>
+      <p>
+        I studied Computer Science at the{" "}
+        <a href="https://soton.ac.uk" target="_blank" rel="noopener noreferrer">
+          University of Southampton
+        </a>{" "}
+        and currently work at{" "}
+        <a href="https://mintel.com" target="_blank" rel="noopener noreferrer">
+          Mintel
+        </a>
+        .
+      </p>
       <Link to="/about/">More about me</Link>
       <hr />
       <h2>Posts</h2>
@@ -28,7 +41,10 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 5) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 5
+    ) {
       edges {
         node {
           id
@@ -42,4 +58,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

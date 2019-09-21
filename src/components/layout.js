@@ -35,15 +35,21 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          display: `flex`,
-          justifyContent: `space-between`,
-        }}>
+        <footer
+          style={{
+            display: `flex`,
+            justifyContent: `space-between`,
+          }}
+        >
+          <div>© {new Date().getFullYear()}</div>
           <div>
-            © {new Date().getFullYear()}
-          </div>
-          <div>
-            <a href="https://github.com/awocallaghan" target="_blank">awocallaghan on GitHub</a>
+            <a
+              href="https://github.com/awocallaghan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              awocallaghan on GitHub
+            </a>
           </div>
         </footer>
       </div>

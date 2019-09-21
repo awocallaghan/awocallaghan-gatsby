@@ -3,8 +3,8 @@ path: "/blog/nodejs-web-frameworks"
 title: "Node.js Web Frameworks"
 date: "2018-01-23"
 ---
-Express
-==
+
+# Express
 
 [Website](https://expressjs.com/) [GitHub](https://github.com/expressjs/express/)
 
@@ -18,8 +18,7 @@ Express also supports a range of [template engines](https://expressjs.com/en/gui
 
 The [express-generator](https://expressjs.com/en/starter/generator.html) package allows for quick generation of a skeleton Express application via a command line interface (CLI).
 
-Loopback
-==
+# Loopback
 
 [Website](https://loopback.io/)
 [GitHub](https://github.com/strongloop/loopback/)
@@ -34,8 +33,7 @@ It can also support a range of popular database management systems via [database
 
 [A comparison of Loopback vs other frameworks](http://loopback.io/resources/#compare)
 
-Sails.js
-==
+# Sails.js
 
 [Website](https://sailsjs.com/)
 [GitHub](https://github.com/balderdashy/sails/)
@@ -44,22 +42,20 @@ Install: `npm install -g sails`
 
 Sails is a framework based on Express implementing a Model-View-Controller (MVC) design pattern similar to [Ruby on Rails](http://rubyonrails.org/).
 
-Sails uses an ORM called [Waterline](https://github.com/balderdashy/waterline) for defining database models which supports a range of database connectors. 
+Sails uses an ORM called [Waterline](https://github.com/balderdashy/waterline) for defining database models which supports a range of database connectors.
 
 [Blueprints](https://sailsjs.com/documentation/concepts/blueprints) allow for rapid development of REST APIs by generating common CRUD methods.
 
-Nest
-==
+# Nest
 
 [Website](https://nestjs.com/)
 [GitHub](https://github.com/kamilmysliwiec/nest)
 
 Install: `git clone https://github.com/nestjs/typescript-starter.git <project-name>`
 
-Nest is a framework based on Express that implements a very similar architecture to an [Angular](https://angular.io) application, including support for TypeScript. 
+Nest is a framework based on Express that implements a very similar architecture to an [Angular](https://angular.io) application, including support for TypeScript.
 
-hapi.js
-==
+# hapi.js
 
 [Website](https://hapijs.com/)
 [GitHub](https://github.com/hapijs/hapi)

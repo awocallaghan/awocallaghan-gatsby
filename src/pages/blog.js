@@ -18,7 +18,7 @@ const BlogPage = ({
     </main>
   </Layout>
 )
-export default BlogPage;
+export default BlogPage
 
 export const pageQuery = graphql`
   query {
@@ -36,4 +36,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
